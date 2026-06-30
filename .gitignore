@@ -1,0 +1,22 @@
+# Build outputs (these belong in Releases, never in git)
+*.zip
+Image
+Image.gz
+Image.gz-dtb
+*.dtb
+dtb.img
+boot.img
+out/
+build_*.log
+
+# Toolchains / kernel source (kept in their own repos)
+source/
+toolchain/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
