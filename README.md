@@ -56,9 +56,15 @@ Each model gets its own dedicated build (own `defconfig`, own flashable zip) —
 > shipping Exynos 9820 kernel (FreeRunnerKernel), but it has **not been
 > booted on the physical device**. Only `boot` and the kernel `Image` are
 > touched — `dtbo` (the partition describing your exact hardware) stays
-> 100% stock. Worst case if something's wrong is a black screen or
-> bootloop, which is recoverable by reflashing stock `AP`/`boot` via Odin —
-> **not** a hard-brick path.
+> 100% stock, so this is **not** a hard-brick path.
+>
+> If the panel driver doesn't match your exact device, the expected failure
+> mode isn't a reboot loop: the bootloader's own splash screen shows up
+> fine (it doesn't depend on this kernel), but once the kernel takes over
+> the display for the Android boot animation, nothing further gets drawn —
+> Android likely keeps booting underneath (init, services, even ADB if it
+> was already authorized), just with no video output. Recover by
+> reflashing stock `AP`/`boot` via Odin.
 
 > ⚠️ **Not supported:** 
 > Galaxy Note 10 (Exynos 9825) and any
