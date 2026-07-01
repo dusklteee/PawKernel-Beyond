@@ -34,6 +34,8 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 > * **YOU** are choosing to make these modifications, and if
 >   you **point the finger at me** for messing up your device, I will laugh at you.
 
+---
+
 ## ✨ Features and Tweaks
 
 - **KernelSU-Next** (`3.2.0-Legacy`, Non-GKI) — root with a manual/ioctl supercall
