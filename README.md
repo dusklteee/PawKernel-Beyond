@@ -19,9 +19,9 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 ---
 
 ## 💬 About PawKernel
-> 🇺🇸 PawKernel is a custom kernel i compiled for **my own S10 Plus** that i thought it would be a good idea to make it public so anyone could try it. Due to that, **don't** be surprised if this repository ever get **archived, deleted or stop receiving updates in an near or far future.** Any feedback or issue reported are welcome, but **don't** expect it to be fixed fast or be actually fixed.
+> 🇺🇸 PawKernel is a custom kernel i compiled for **my own S10 Plus** that i thought it would be a good idea to make it public so anyone could try it. Due to it being a personal project, **don't** be surprised if this repository ever get **archived, deleted or stop receiving updates in an near or far future.** Any feedback or issue reported are welcome, but **don't** expect it to be fixed fast or be actually fixed.
 
-> 🇧🇷 O PawKernel é um custom kernel que eu compilei para o **meu S10 Plus** que achei que seria uma boa ideia fazer do projeto público para que qualquer pessoa pudesse testar no seu S10. Por causa disso, **não fique surpreso se esse repositório for arquivado, apagado ou parar de receber atualizações em um futuro próximo ou distante.** Qualquer feedback ou bug reportado é bem vindo, mas **não** espere que o problema seja resolvido com rapidez ou que seja realmente corrigido.
+> 🇧🇷 O PawKernel é um custom kernel que eu compilei para o **meu S10 Plus** que achei que seria uma boa ideia fazer do projeto público para que qualquer pessoa pudesse testar no seu S10. Por conta de ser um projeto pessoal, **não fique surpreso se esse repositório for arquivado, apagado ou parar de receber atualizações em um futuro próximo ou distante.** Qualquer feedback ou bug reportado é bem vindo, mas **não** espere que o problema seja resolvido com rapidez ou que seja realmente corrigido.
 
 ## ✨ Features and Tweaks
 
