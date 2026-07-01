@@ -53,7 +53,7 @@ Each model gets its own dedicated build (own `defconfig`, own flashable zip) —
 > [!NOTE]
 > "Experimental" means the kernel was built with the correct model-specific
 > drivers (panel, fingerprint, sensors), but it has **not been
-> booted on the physical device**. Only `boot` and the kernel `Image` are
+> tested on the physical device**. Only `boot` and the kernel `Image` are
 > touched — `dtbo` (the partition describing your exact hardware) stays
 > 100% stock, so this is **not** a hard-brick path.
 >
