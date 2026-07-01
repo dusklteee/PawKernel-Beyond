@@ -16,9 +16,6 @@ shared across the whole S10 line.
 - `beyond0lte` (S10e) gets its first dedicated build, with the correct
   `S6E3FA7` panel / `ET5XX` fingerprint / `TCS3407` sensor drivers instead
   of the S10+'s.
-- Every model's hardware-driver selection was cross-checked against
-  FreeRunnerKernel v3.7 (a shipping Exynos 9820 kernel covering the same
-  four codenames) — all four matched exactly.
 - Device-check in each zip is now locked to its own codename; flashing the
   wrong zip on the wrong device is refused instead of silently allowed.
 - Tier: `beyond2lte` remains the only kernel tested on real hardware. The
@@ -32,8 +29,8 @@ shared across the whole S10 line.
   *below* its top step, which structurally never applies to the top row
   itself — the tweak had zero real effect on the interactive governor in
   use. `dtb`/`dtbo` now stay 100% stock on every device; only the kernel
-  `Image` is flashed, matching FreeRunnerKernel's approach.
-
+  `Image` is flashed.
+  
 ## [1.0 Stable] — 2026-06-29
 
 First stable release. `uname` reports `-PawKernel-1.0-SuSFS`.
