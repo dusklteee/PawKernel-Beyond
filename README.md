@@ -8,7 +8,7 @@
 
 A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 
-![Version](https://img.shields.io/badge/version-1.0_Stable-2e7d32?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.0b-2e7d32?style=flat-square)
 ![Linux](https://img.shields.io/badge/Linux-4.14.356-orange?style=flat-square)
 ![Android](https://img.shields.io/badge/Android-14_–_16-3ddc84?style=flat-square)
 ![SoC](https://img.shields.io/badge/Exynos-9820-1565c0?style=flat-square)
@@ -17,9 +17,6 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 </div>
 
 ---
-
-> [!WARNING]
-> Do not flash on S10e and S10 base model, possible bootloop or blackscreen ahead! wait for a dedicate installer
 
 ## 💬 About PawKernel
 > 🇺🇸 PawKernel is a custom kernel i compiled for **my own S10 Plus** that i thought it would be a good idea to make it public so anyone could try it. Due to it being a personal project, **don't** be surprised if this repository ever get **archived, deleted or stop receiving updates in an near or far future.** Any feedback or issue reported are welcome, but **don't** expect it to be fixed fast or be actually fixed.
@@ -35,17 +32,33 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
   pinning the clocks to max (battery-friendly).
 - **Networking** — BBR congestion control + FQ qdisc by default.
 - **Memory** — ZSTD ZRAM with writeback of cold pages.
-- **GPU DVFS tuning** — faster ramp-up under load at a stable 702 MHz (no overclock).
 - **Deblobbed** & cleaned defconfig (debug overhead removed) for a smaller image file.
+- **Stock `dtb`/`dtbo`** — no device tree replaced; only the kernel `Image` is flashed.
 - **AOSP-based ROMs only** (LineageOS, EvolutionX, etc.) — Do not try on One UI, ur phone may bootloop.
 
 ---
 
 ## 📱 Supported devices
 
-All four Exynos 9820 variants should work fine with this kernel:
+Each model gets its own dedicated build (own `defconfig`, own flashable zip) —
+**do not** flash a zip meant for a different codename.
 
-S10e - beyond0lte - **Untested** | S10 - beyond1lte - **Untested** | S10+ - beyond2lte - Tested, working | S10 5G - beyondxlte - **Untested**
+| Device | Codename | Status |
+|---|---|---|
+| S10+ | `beyond2lte` | ✅ **Tested, working** |
+| S10e | `beyond0lte` | 🧪 **Experimental** — config validated, needs real-hardware testers |
+| S10 | `beyond1lte` | 🧪 **Experimental** — config validated, needs real-hardware testers |
+| S10 5G | `beyondx` | 🧪 **Experimental** — config validated, needs real-hardware testers |
+
+> [!NOTE]
+> "Experimental" means the kernel was built with the correct model-specific
+> drivers (panel, fingerprint, sensors) and cross-checked against another
+> shipping Exynos 9820 kernel (FreeRunnerKernel), but it has **not been
+> booted on the physical device**. Only `boot` and the kernel `Image` are
+> touched — `dtbo` (the partition describing your exact hardware) stays
+> 100% stock. Worst case if something's wrong is a black screen or
+> bootloop, which is recoverable by reflashing stock `AP`/`boot` via Odin —
+> **not** a hard-brick path.
 
 > ⚠️ **Not supported:** 
 > Galaxy Note 10 (Exynos 9825) and any
@@ -72,8 +85,10 @@ S10e - beyond0lte - **Untested** | S10 - beyond1lte - **Untested** | S10+ - beyo
 - A custom recovery (e.g. LineageOS recovery / TWRP).
 
 **Steps**
-1. Download the latest **`PawKernel-...-Stable.zip`** from the
-   [Releases](../../releases) page.
+1. Download the zip matching **your exact device** from the
+   [Releases](../../releases) page (e.g. `PawKernel-Beyond-S10+-...zip` for a
+   `beyond2lte`) — flashing the wrong one will refuse to install
+   (device-check) or, worse, boot with the wrong drivers.
 2. Reboot into your custom recovery.
 3. Flash the zip using ADB Sideload or "Select from disk/Install menu (if using TWRP).
 4. Reboot to system.
