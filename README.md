@@ -19,7 +19,7 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 ---
 
 > [!WARNING]
-> Do not flash on S10e, possible bootloop or blackscreen. wait for a dedicate installer
+> Do not flash on S10e and S10 base model, possible bootloop or blackscreen ahead! wait for a dedicate installer
 
 ## 💬 About PawKernel
 > 🇺🇸 PawKernel is a custom kernel i compiled for **my own S10 Plus** that i thought it would be a good idea to make it public so anyone could try it. Due to it being a personal project, **don't** be surprised if this repository ever get **archived, deleted or stop receiving updates in an near or far future.** Any feedback or issue reported are welcome, but **don't** expect it to be fixed fast or be actually fixed.
