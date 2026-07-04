@@ -97,7 +97,7 @@ Each model gets its own dedicated build (own `defconfig`, own flashable zip) —
 2. Reboot into your custom recovery.
 3. Flash the zip using ADB Sideload or "Select from disk/Install menu (if using TWRP).
 4. Reboot to system.
-5. Install the [**KernelSU-Next Manager**](https://github.com/KernelSU-Next/KernelSU-Next/releases/) app to manage root.
+5. Install the [**KernelSU-Next Manager**](https://github.com/KernelSU-Next/KernelSU-Next/releases/tag/v3.2.0) app to manage root.
 
 ## 🧱 Built from source
 
