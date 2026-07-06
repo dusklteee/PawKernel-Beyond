@@ -2,9 +2,7 @@
 
 ![PawKernel banner](assets/banner.jpg)
 
-# PawKernel
-
-A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820) Featuring
+# PawKernel, A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820) Featuring
 KernelSU Next and SuSFS Built-in.
 
 ![Version](https://img.shields.io/badge/version-1.0b-2e7d32?style=flat-square)
