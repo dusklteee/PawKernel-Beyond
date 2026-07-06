@@ -4,9 +4,8 @@
 
 # PawKernel
 
-### Go Beyond.
-
-A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
+A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820) Featuring
+KernelSU Next and SuSFS Built-in.
 
 ![Version](https://img.shields.io/badge/version-1.0b-2e7d32?style=flat-square)
 ![Linux](https://img.shields.io/badge/Linux-4.14.356-orange?style=flat-square)
@@ -23,8 +22,8 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 
 > 🇧🇷 O PawKernel é um custom kernel que eu compilei para o **meu S10 Plus** que achei que seria uma boa ideia fazer do projeto público para que qualquer pessoa pudesse testar no seu S10. Por conta de ser um projeto pessoal, **não fique surpreso se esse repositório for arquivado, apagado ou parar de receber atualizações em um futuro próximo ou distante.** Qualquer feedback ou bug reportado é bem vindo, mas **não** espere que o problema seja resolvido com rapidez ou que seja realmente corrigido.
 
-## ! Disclaimer
 > [!WARNING]
+> **DISCLAIMER:**
 > Flashing a custom kernel requires an **unlocked bootloader** Make a backup if you're doing it for
 > the first time. You do this at your own risk:
 
@@ -34,6 +33,10 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 >   do some research if you have any concerns about doing this to your device.
 > * **YOU** are choosing to make these modifications, and if
 >   you **point the finger at me** for messing up your device, I will laugh at you.
+
+</div>
+
+---
 
 ## ✨ Features and Tweaks
 
@@ -45,37 +48,31 @@ A custom kernel for the **Samsung Galaxy S10 series** (Exynos 9820)
 - **Networking** — BBR congestion control + FQ qdisc by default.
 - **Memory** — ZSTD ZRAM with writeback of cold pages.
 - **Deblobbed** & cleaned defconfig (debug overhead removed) for a smaller image file.
-- **Stock `dtb`/`dtbo`** — no device tree replaced; only the kernel `Image` is flashed.
-- **AOSP-based ROMs only** (LineageOS, EvolutionX, etc.) — Do not try on One UI, ur phone may bootloop.
+
+> [!WARNING]
+>**AOSP-based ROMs only** (LineageOS, EvolutionX, etc.) — Do not try on One UI, ur phone may bootloop.
 
 ---
 
 ## 📱 Supported devices
 
-Each model gets its own dedicated build (own `defconfig`, own flashable zip) —
+Each model gets its own dedicated build —
 **do not** flash a zip meant for a different codename.
 
 | Device | Codename | Status |
 |---|---|---|
+| S10e | `beyond0lte` | ✅ **Tested, working** |
 | S10+ | `beyond2lte` | ✅ **Tested, working** |
-| S10e | `beyond0lte` | 🧪 **Experimental** — config validated, needs real-hardware testers |
-| S10 | `beyond1lte` | 🧪 **Experimental** — config validated, needs real-hardware testers |
-| S10 5G | `beyondx` | 🧪 **Experimental** — config validated, needs real-hardware testers |
+| S10 | `beyond1lte` | 🧪 **Experimental** — Not tested yet. |
+| S10 5G | `beyondx` | 🧪 **Experimental** — Not tested yet. |
 
 > [!NOTE]
 > "Experimental" means the kernel was built with the correct model-specific
-> drivers (panel, fingerprint, sensors), but it has **not been
-> tested on the physical device**. Only `boot` and the kernel `Image` are
-> touched — `dtbo` (the partition describing your exact hardware) stays
-> 100% stock, so this is **not** a hard-brick path.
+> drivers, but it has **not been tested on the physical device**. 
+> Only `boot` and the kernel `Image` are touched.
 >
-> If the panel driver doesn't match your exact device, the expected failure
-> mode isn't a reboot loop: the bootloader's own splash screen shows up
-> fine (it doesn't depend on this kernel), but once the kernel takes over
-> the display for the Android boot animation, nothing further gets drawn —
-> Android likely keeps booting underneath (init, services, even ADB if it
-> was already authorized), just with no video output. Recover by
-> reflashing stock `AP`/`boot` via Odin.
+> If you face a bootloop, while flashing the kernel, reflash your custom rom
+> without wiping /data or reflash the previous kernel and report the issue + the model.
 
 > ⚠️ **Not supported:** 
 > Galaxy Note 10 (Exynos 9825) and any
