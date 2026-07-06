@@ -2,6 +2,23 @@
 
 All notable changes to PawKernel are documented here.
 
+## [1.0.1] — 2026-07-06
+
+KSUN hotfix. `uname` now reports `-PawKernel-1.0.1-SuSFS`.
+
+### Fixed
+- **S10e (`beyond0lte`): KernelSU-Next reported version `1` (v0.0.1)** and was
+  rejected by the KernelSU-Next Manager (`version 1 is too low, please upgrade
+  to 33110 or higher`). The build had been compiled while the KernelSU-Next
+  source was temporarily missing its own `.git`, so the Kbuild version
+  calculation fell back to `1`. Restored the git metadata; all four models now
+  report KernelSU-Next `33133`.
+
+### Changed
+- S10 (`beyond1lte`), S10+ (`beyond2lte`) and S10 5G (`beyondx`) rebuilt for
+  version parity only — they already reported `33133` and were never affected
+  by the S10e bug (sync with S10e hotfix version).
+
 ## [1.0b] — 2026-07-01
 
 Dedicated per-model builds. Each codename now ships its own flashable zip
