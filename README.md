@@ -70,8 +70,8 @@ Each model gets its own dedicated build —
 > drivers, but it has **not been tested on the physical device**. 
 > Only `boot` and the kernel `Image` are touched.
 >
-> If you face a bootloop, while flashing the kernel, reflash your custom rom
-> without wiping /data or reflash the previous kernel and report the issue + the model.
+> If you face a bootloop after flashing the kernel, reflash your custom rom
+> without wiping /data or reflash the previous kernel and open an issue (Not limited to bootloops) with your phone model and problem faced. (ROM-Related issues will **NOT** be considered.)
 
 > ⚠️ **Not supported:** 
 > Galaxy Note 10 (Exynos 9825) and any
