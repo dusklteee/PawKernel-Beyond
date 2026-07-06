@@ -24,9 +24,9 @@ KernelSU Next and SuSFS Built-in.
 
 > [!WARNING]
 > **DISCLAIMER:**
-> Flashing a custom kernel requires an **unlocked bootloader** Make a backup if you're doing it for
-> the first time. You do this at your own risk:
-
+>Flashing a custom kernel requires an **unlocked bootloader**,
+>Make a backup if you're doing it for the first time. You do this at your own risk:
+> 
 > * Your warranty is now void.
 > * I am not responsible for bricked devices, dead SD cards,
 >   thermonuclear war, or you getting fired because the alarm app failed. Please
