@@ -40,7 +40,7 @@ KernelSU Next and SuSFS Built-in.
 
 - **KernelSU-Next** (`3.2.0-Legacy`, Non-GKI) — root with a manual/ioctl supercall
   hook.
-- **SuSFS `1.5.5`** + **SUS Mount** reimplementation
+- **SuSFS `1.5.5`** + **SUS Mount / SUS_MAP** reimplementation
 - **Touch and fingerprint boost** — lower input latency on scroll/unlock without
   pinning the clocks to max (battery-friendly).
 - **Networking** — BBR congestion control + FQ qdisc by default.
