@@ -6,7 +6,6 @@
 
 KernelSU Next and SuSFS Built-in.
 
-![Version](https://img.shields.io/badge/version-1.0b-2e7d32?style=flat-square)
 ![Linux](https://img.shields.io/badge/Linux-4.14.356-orange?style=flat-square)
 ![Android](https://img.shields.io/badge/Android-14_–_16-3ddc84?style=flat-square)
 ![SoC](https://img.shields.io/badge/Exynos-9820-1565c0?style=flat-square)
